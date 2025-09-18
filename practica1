@@ -1,0 +1,162 @@
+#include <iostream>
+using namespace std;
+int main(int argc, char* argv[]) {
+    int x = 'a';
+    x = x + 1;
+    char c = x;
+    cout << "El valor del int x es " << x << "." << endl;
+    cout << "El valor del char c es " << c << "." << endl;
+    return 0;
+}
+#include <iostream>
+using namespace std;
+int main(int argc, char* argv[]) {
+    int x, y, min, max;
+    cout << "Valor de x: ";
+    cin >> x;
+    cout << "Valor de y: ";
+    cin >> y;
+    if (x < y) min = x;
+    else min = y;
+    max = (x > y) ? x : y;
+    cout << "El minimo es " << min << " y el maximo es " << max << endl;
+    return 0;
+}
+#include <iostream>
+using namespace std;
+
+const int minimo = 0, maximo = 10;
+
+int main(int argc, char* argv[]) {
+    int n;
+    cout << "Introduzca un número entre " << minimo << " y " << maximo << "." << endl;
+    cin >> n;
+    if (n < minimo || n > maximo)
+        cout << "El valor " << n << " está fuera del rango." << endl;
+    else
+        switch (n) {
+            case 0:
+                cout << "No existe definición de primo en este caso" << endl;
+                break;
+            case 2:
+            case 3:
+            case 5:
+            case 7:
+                cout << "El número " << n << " es primo" << endl;
+                break;
+            default:
+                cout << "El número " << n << " no es primo" << endl;
+                break;
+        }
+    return 0;
+}
+#include <iostream>
+using namespace std;
+
+int main(int argc, char* argv[]) {
+    int cuantos;
+    cout << "¿Cuántos datos va a introducir? ";
+    cin >> cuantos;
+    if (cuantos <= 0)
+        cout << "La cantidad no es válida";
+    else {
+        int llevo = 0;
+        double suma = 0, dato, media = 0;
+        while (llevo < cuantos) {
+            cout << "Introduzca el dato " << llevo + 1 << ": ";
+            cin >> dato;
+            suma += dato;
+            llevo++;
+        }
+        media = suma / cuantos;
+        cout << "La media de los " << cuantos << " datos es " << media << "." << endl;
+    }
+    return 0;
+}
+#include <iostream>
+using namespace std;
+
+int main(int argc, char* argv[]) {
+    char c;
+    bool test;
+    cout << "Pulse teclas numéricas. Acabe pulsando ESC" << endl;
+    do {
+        c = getchar();
+        test = (c >= '0' && c <= '9');
+        if (test)
+            cout << c << " pulsado." << endl;
+    } while (c != 27); // 27 es el código ASCII de ESC
+    return 0;
+}
+#include <iostream>
+using namespace std;
+
+int menor(int x, int y) {
+    return x < y ? x : y;
+}
+
+int menorde3(int x, int y, int z); // solo la declaración
+
+int main(int argc, char* argv[]) {
+    int a, b, c;
+    cout << "Escribe tres datos enteros" << endl;
+    cin >> a >> b >> c;
+    cout << "El menor de los tres números es " << menorde3(a, b, c) << endl;
+    return 0;
+}
+
+int menorde3(int x, int y, int z) {
+    return menor(menor(x, y), z);
+}
+{
+ "workspace_type": "File System Workspace",
+ "name": "estructuradedatos",
+ "configs": [{
+   "name": "Debug",
+   "targets": [["build", ""], ["clean", ""]],
+   "file_extensions": "*.cpp;*.c;*.txt;*.json;*.hpp;*.cc;*.cxx;*.xml;*.h;*.wxcp;*.py;*.php;*.rb;*.html;*.js;*.ts;*.rs;*.iss;*.md;*.bat;*.sh;*.cmake",
+   "excludeFilesPattern": "*.o;*.pyc;*.obj;*.workspace;*.o.d;*.exe;*.dll;*.project",
+   "excludePaths": "",
+   "debugger": "GNU gdb debugger"
+  }]
+}
+#include <iostream>
+int main(int argc, char* argv[]) {
+    int x;
+    std::cout << "Escriba un numero: ";
+    std::cin >> x;
+    std::cout << "El numero introducido es " << x;
+    return 0;
+}
+#include <iostream>
+using namespace std;
+int main(int argc, char* argv[]) {
+    int x, y, z;
+    cout << "Introduzca el primer numero: ";
+    cin >> x;
+    cout << "Introduzca el segundo numero: ";
+    cin >> y;
+    z = x + y;
+    cout << "La suma " << x << " mas " << y << " es igual a " << z << "." << endl;
+    return 0;
+}
+#include <iostream>
+int main(int argc, char* argv[]) {
+    int x;
+    std::cout << "Escriba un numero: ";
+    std::cin >> x;
+    std::cout << "El numero introducido es " << x;
+    return 0;
+}
+#include <iostream>
+using namespace std;
+int main(int argc, char* argv[]) {
+    int x, y, z;
+    cout << "Introduzca el primer numero: ";
+    cin >> x;
+    cout << "Introduzca el segundo numero: ";
+    cin >> y;
+    z = x + y;
+    cout << "La suma " << x << " mas " << y << " es igual a " << z << "." << endl;
+    return 0;
+	}
